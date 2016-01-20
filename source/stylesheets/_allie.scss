@@ -1,0 +1,19 @@
+// background gradient
+html, body{
+  height: 100%;
+}
+
+#background{
+  background: #fef4f6; /* Old browsers */
+  background: -moz-linear-gradient(top,  #fef4f6 0%, #f78ba0 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top,  #fef4f6 0%,#f78ba0 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom,  #fef4f6 0%,#f78ba0 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fef4f6', endColorstr='#f78ba0',GradientType=0 ); /* IE6-9 */
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}

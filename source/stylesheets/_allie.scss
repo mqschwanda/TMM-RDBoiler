@@ -67,3 +67,25 @@ html, body{
   }
 }
 
+// contest
+
+#contest{
+  label, .terms, .rules{
+    font-family:'TwCenMT-Bold';
+    text-transform: uppercase;
+  }
+  a{
+    text-decoration: underline;
+    color: black;
+  }
+  .disc{
+    color: white;
+    font-family: 'PlacardMT-BoldCondensed';
+  }
+}
+
+.form-control{
+  border-radius: 20px;
+  background-color: #f9e1e5;
+  border-color: #d696a1;
+}

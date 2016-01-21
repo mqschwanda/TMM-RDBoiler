@@ -1,21 +1,19 @@
 // ADD YOUR JS HERE
 // console.log('loaded');
-function resizeBg(){
-  var docH = $(document).height();
-  $('#background').css('height', docH);
-}
+// resizer
+// function resizeBg(){
+//   var docH = $(document).height();
+//   $('#background').css('height', docH);
+// }
 
+// Document ready
 $(function(){
-  resizeBg();
   // setup datepicker
   $('.datepicker').pickadate({
     selectYears: 90
   });
 });
 
-$(window).resize(function(){
-  resizeBg();
-});
 
 // iterate through errors and growl them
 function growlz(){
@@ -47,6 +45,7 @@ $.validator.addMethod("minAge", function(value, element, min) {
 
 
 $("#contest").validate({
+  focusInvalid: false,
   rules: {
     // first name
     'entry.1862104037': {

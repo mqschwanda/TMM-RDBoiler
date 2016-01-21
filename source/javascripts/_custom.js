@@ -131,8 +131,10 @@ $("#contest").validate({
   submitHandler: function(form) {
     formH = $('#contest').height();
     form.submit();
+    $.growl.notice({ message: "Thanks! We've received your entry." });
     setTimeout(function(){
-      $('#contest').html(successMsg).css('min-height', formH);
+      $('#contest').parent().html(successMsg).css('min-height', formH);
+      $('html, body').animate({scrollTop:$('#contest').position().top}, 'fast');
     }, 500);
   }
 });

@@ -4,4 +4,6 @@
 //= require _picker
 //= require _picker.date
 //= require _picker.time
+//= require _jquery.validate.min
+//= require _additional-methods.min
 //= require _custom

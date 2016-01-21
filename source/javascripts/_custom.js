@@ -59,6 +59,7 @@ $("#contest").validate({
           return true;
         }
       },
+      lettersonly: true,
       minlength: 2
     },
     // last name
@@ -70,6 +71,7 @@ $("#contest").validate({
           return true;
         }
       },
+      lettersonly: true,
       minlength: 2
     },
     // email
@@ -97,11 +99,13 @@ $("#contest").validate({
     // first name
     'entry.1862104037': {
       required: "Please give your first name.",
+      lettersonly: "Letters only in the name fields please.",
       minlength: jQuery.validator.format("At least {0} characters required!"),
     },
     // last name
     'entry.2059930985': {
       required: "Please give your last name.",
+      lettersonly: "Letters only in the name fields please.",
       minlength: jQuery.validator.format("At least {0} characters required!"),
     },
     // email

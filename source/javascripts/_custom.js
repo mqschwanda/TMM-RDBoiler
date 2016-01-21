@@ -136,7 +136,7 @@ $("#contest").validate({
       $('#contest').parent().html(successMsg).css('min-height', formH);
     }, 500);
     setTimeout(function(){
-      $('html, body').animate({scrollTop:$('#thankyou').position().top}, 'fast');
+      $.scrollTo('#thankyou', 1000, { offset: 0, 'axis': 'y' });
     }, 600);
   }
 });

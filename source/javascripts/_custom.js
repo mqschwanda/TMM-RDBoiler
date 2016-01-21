@@ -47,6 +47,7 @@ $.validator.addMethod("minAge", function(value, element, min) {
 
 
 $("#contest").validate({
+  focusInvalid: false,
   rules: {
     // first name
     'entry.1862104037': {

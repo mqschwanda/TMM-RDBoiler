@@ -134,8 +134,10 @@ $("#contest").validate({
     $.growl.notice({ message: "Thanks! We've received your entry." });
     setTimeout(function(){
       $('#contest').parent().html(successMsg).css('min-height', formH);
-      $('html, body').animate({scrollTop:$('#contest').position().top}, 'fast');
     }, 500);
+    setTimeout(function(){
+      $('html, body').animate({scrollTop:$('#thankyou').position().top}, 'fast');
+    }, 600);
   }
 });
 

@@ -8,9 +8,10 @@
 
 // Document ready
 $(function(){
-  // setup datepicker
-  $('.datepicker').pickadate({
-    selectYears: 90
+  // datepicker
+  $('.datepicker').datetimepicker({
+    timepicker:false,
+    format: 'm/d/y'
   });
 });
 

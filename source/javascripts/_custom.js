@@ -13,3 +13,6 @@ $(window).resize(function(){
   resizeBg();
 });
 
+$(function(){
+  $.growl.error({ message: "The kitten is attacking!" });
+});

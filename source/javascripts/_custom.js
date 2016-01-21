@@ -28,6 +28,9 @@ function growlz(){
 }
 
 
+// successMsg Constructor
+var successMsg = "<div id=\"thankyou\" class=\"col-xs-12 text-center\"><h2 class=\"thanks\">Thank you for entering!</h2><p>Would you like to enter again?</p><button class=\"again-button\">Enter Again</div></div>"
+
 // Add age validation method
 $.validator.addMethod("minAge", function(value, element, min) {
     var today = new Date();
@@ -119,6 +122,14 @@ $("#contest").validate({
   },
   invalidHandler: function(form, validator) {
     growlz();
+  },
+  success: "valid",
+  submitHandler: function(form) {
+    formH = $('#contest').height();
+    form.submit();
+    setTimeout(function(){
+      $('#contest').html(successMsg).css('min-height', formH);
+    }, 500);
   }
 });
 
@@ -146,6 +157,12 @@ $("#age-gate").validate({
       $('#content').fadeIn();
       $('#footer').fadeIn();
     }, 500);
-
   }
+});
+
+// reload the page
+
+$(document).on('click','.again-button', function(e){
+  e.preventDefault();
+  location.reload();
 });

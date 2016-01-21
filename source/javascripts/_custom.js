@@ -6,15 +6,15 @@ function resizeBg(){
 }
 
 $(function(){
-  resizeBg();
+  // resizeBg();
   // setup datepicker
-  // $('.datepicker').pickadate({
-  //   selectYears: 90
-  // });
+  $('.datepicker').pickadate({
+    selectYears: 90
+  });
 });
 
 $(window).resize(function(){
-  resizeBg();
+  // resizeBg();
 });
 
 // iterate through errors and growl them

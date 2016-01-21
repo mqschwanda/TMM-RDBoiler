@@ -9,18 +9,26 @@
   padding-top: 4%;
 }
 html, body{
-  height: 100%;
   min-height: 100%;
   margin: 0px; /* Remove the margin around the body */
   overflow-x: hidden;
 }
 
-#background{
+#background, #content{
   background: #fef4f6; /* Old browsers */
   background: -moz-linear-gradient(top,  #fef4f6 0%, #f78ba0 100%); /* FF3.6-15 */
   background: -webkit-linear-gradient(top,  #fef4f6 0%,#f78ba0 100%); /* Chrome10-25,Safari5.1-6 */
   background: linear-gradient(to bottom,  #fef4f6 0%,#f78ba0 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fef4f6', endColorstr='#f78ba0',GradientType=0 ); /* IE6-9 */
+}
+
+#content{
+  margin-left: 0;
+  margin-right: 0;
+  width: 100%;
+}
+
+#background{
   position: absolute;
   height: 100%;
   width: 100%;
@@ -38,6 +46,7 @@ html, body{
   position: relative;
   bottom: 0;
   text-align: center;
+  background-color: #f78ba0;
 }
 
 .footer{
@@ -118,7 +127,7 @@ html, body{
   border-radius: 12px;
   text-transform: uppercase;
   color: white;
-  font-size: 51px;
+  font-size: 30px;
   letter-spacing: -2px;
   font-family: 'TwCenMT-Bold';
   padding: 0 14px;

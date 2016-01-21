@@ -8,9 +8,10 @@
 
 // Document ready
 $(function(){
-  // setup datepicker
-  $('.datepicker').pickadate({
-    selectYears: 90
+  // datepicker
+  $('.datepicker').datetimepicker({
+    timepicker:false,
+    format: 'm/d/y'
   });
 });
 
@@ -131,9 +132,13 @@ $("#contest").validate({
   submitHandler: function(form) {
     formH = $('#contest').height();
     form.submit();
+    $.growl.notice({ message: "Thanks! We've received your entry." });
     setTimeout(function(){
-      $('#contest').html(successMsg).css('min-height', formH);
+      $('#contest').parent().html(successMsg).css('min-height', formH);
     }, 500);
+    setTimeout(function(){
+      $.scrollTo('#thankyou', 1000, { offset: 0, 'axis': 'y' });
+    }, 600);
   }
 });
 

@@ -8,9 +8,9 @@ function resizeBg(){
 $(function(){
   resizeBg();
   // setup datepicker
-  $('.datepicker').pickadate({
-    selectYears: 90
-  });
+  // $('.datepicker').pickadate({
+  //   selectYears: 90
+  // });
 });
 
 $(window).resize(function(){

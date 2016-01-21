@@ -7,9 +7,11 @@ function resizeBg(){
 
 $(function(){
   resizeBg();
+  // test growl
+  $.growl.error({ message: "The kitten is attacking!" });
+  $('.datepicker').pickadate();
 });
 
 $(window).resize(function(){
   resizeBg();
 });
-

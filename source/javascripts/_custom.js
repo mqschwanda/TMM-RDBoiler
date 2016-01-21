@@ -104,12 +104,12 @@ $("#contest").validate({
     // email
     'entry.322932457': {
       required: "Please give your e-mail address.",
-      email: "Please give a valid e-mail address.",
+      email: "Please give a valid e-mail address."
     },
     // birthday
     'entry.328909515': {
       required: "You must enter your date of birth",
-      minAge: "You must be at least 13 years old..",
+      minAge: "You must be at least 13 years old."
     },
     'entry.1685083969': {
       number: "Phone number must be numbers only.",
@@ -119,5 +119,33 @@ $("#contest").validate({
   },
   invalidHandler: function(form, validator) {
     growlz();
+  }
+});
+
+$("#age-gate").validate({
+  focusInvalid: false,
+  rules: {
+    birthday: {
+      required: true,
+      minAge: 13
+    }
+  },
+  messages: {
+    birthday: {
+      required: "You must enter your date of birth",
+      minAge: "You must be at least 13 years old."
+    }
+  },
+  invalidHandler: function(form, validator) {
+    growlz();
+  },
+  success: "valid",
+  submitHandler: function() {
+    $('#gate').fadeOut( 500 );
+    setTimeout(function(){
+      $('#content').fadeIn();
+      $('#footer').fadeIn();
+    }, 500);
+
   }
 });

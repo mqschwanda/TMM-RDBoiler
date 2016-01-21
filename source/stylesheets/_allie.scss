@@ -69,7 +69,7 @@ html, body{
 
 // contest
 
-#contest{
+#contest, #age-gate{
   label, .terms, .rules{
     font-family:'TwCenMT-Bold';
     text-transform: uppercase;
@@ -102,4 +102,8 @@ html, body{
 
 .error{
   color: red;
+}
+
+#content, #footer{
+  display: none;
 }

@@ -175,3 +175,16 @@ $(document).on('click','.again-button', function(e){
   e.preventDefault();
   location.reload();
 });
+
+$('.datepicker').on('focus', function(){
+  if($('#dtBox').is(':visible')){
+    $('.datepicker').blur();
+    $("#contest :input").prop("disabled", true);
+  } else {
+    $("#contest :input").prop("disabled", false);
+  }
+});
+
+$('.datepicker').on('blur', function(){
+  $("#contest :input").prop("disabled", false);
+});

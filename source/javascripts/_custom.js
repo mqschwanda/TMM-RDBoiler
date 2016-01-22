@@ -1,21 +1,3 @@
-// ADD YOUR JS HERE
-// console.log('loaded');
-// resizer
-// function resizeBg(){
-//   var docH = $(document).height();
-//   $('#background').css('height', docH);
-// }
-
-// Document ready
-$(function(){
-  // datepicker
-  $('.datepicker').datetimepicker({
-    timepicker:false,
-    format: 'm/d/y'
-  });
-});
-
-
 // iterate through errors and growl them
 function growlz(){
   setTimeout(function(){

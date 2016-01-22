@@ -1,23 +1,3 @@
-// Datepicker
-$(document).ready(function(){
- $("#dtBox").DateTimePicker({
-  dateFormat: "mm-dd-yyyy"
- });
-});
-
-// iterate through errors and growl them
-function growlz(){
-  setTimeout(function(){
-    $('label.error').each(function(){
-      if($(this).html() != ""){
-        var errorText = $(this).text();
-        $.growl.error({ message: errorText });
-      }
-    });
-  }, 100);
-}
-
-
 // successMsg Constructor
 var successMsg = "<div id=\"thankyou\" class=\"col-xs-12 text-center\"><h2 class=\"thanks\">Thank you for entering!</h2><p>Would you like to enter again?</p><button class=\"again-button\">Enter Again</div></div>"
 
@@ -176,9 +156,15 @@ $(document).on('click','.again-button', function(e){
   location.reload();
 });
 
+// form fixer
 $('.datepicker').on('focus', function(){
   if($('#dtBox').is(':visible')){
     $('.datepicker').blur();
+    // enable touch events on datepicker
+    $(".increment, .decrement").hammer({domEvents: true}).bind("tap", function(){
+      $(this).click();
+      preventGhosts($(this));
+    });
     $("#contest :input").prop("disabled", true);
   } else {
     $("#contest :input").prop("disabled", false);

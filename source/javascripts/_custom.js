@@ -162,7 +162,6 @@ $('.datepicker').on('focus', function(){
     $('.datepicker').blur();
     // enable touch events on datepicker
     $(".increment, .decrement").hammer({domEvents: true}).bind("tap", function(){
-      $(this).click();
       preventGhosts($(this));
     });
     $("#contest :input").prop("disabled", true);

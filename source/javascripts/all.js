@@ -7,5 +7,4 @@
 //= require _hammer
 //= require _jquery.hammer
 //= require _DateTimePicker
-//= require _preventghost
 //= require _custom

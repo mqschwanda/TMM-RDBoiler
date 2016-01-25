@@ -1,20 +1,11 @@
-// ADD YOUR JS HERE
-// console.log('loaded');
-// resizer
-// function resizeBg(){
-//   var docH = $(document).height();
-//   $('#background').css('height', docH);
-// }
 
-// Document ready
-$(function(){
-  // datepicker
-  $('.datepicker').datetimepicker({
-    timepicker:false,
-    format: 'm/d/y'
+
+// Datepicker
+$(document).ready(function(){
+  $("#dtBox").DateTimePicker({
+    dateFormat: "mm-dd-yyyy"
   });
 });
-
 
 // iterate through errors and growl them
 function growlz(){
@@ -32,10 +23,21 @@ function growlz(){
 // successMsg Constructor
 var successMsg = "<div id=\"thankyou\" class=\"col-xs-12 text-center\"><h2 class=\"thanks\">Thank you for entering!</h2><p>Would you like to enter again?</p><button class=\"again-button\">Enter Again</div></div>"
 
+// dateparse for safari compatibility
+function parseDate(input, format) {
+  format = format || 'yyyy-mm-dd'; // default format
+  var parts = input.match(/(\d+)/g),
+      i = 0, fmt = {};
+  // extract date-part indexes from the format
+  format.replace(/(yyyy|dd|mm)/g, function(part) { fmt[part] = i++; });
+
+  return new Date(parts[fmt['yyyy']], parts[fmt['mm']]-1, parts[fmt['dd']]);
+}
+
 // Add age validation method
 $.validator.addMethod("minAge", function(value, element, min) {
     var today = new Date();
-    var birthDate = new Date(value);
+    var birthDate = new Date(parseDate(value, 'mm-dd-yyyy'));
     var age = today.getFullYear() - birthDate.getFullYear();
     if (age > min+1) {
         return true;
@@ -174,4 +176,23 @@ $("#age-gate").validate({
 $(document).on('click','.again-button', function(e){
   e.preventDefault();
   location.reload();
+});
+
+// form fixer
+$('.datepicker').on('focus', function(){
+  if($('#dtBox').is(':visible')){
+    $('.datepicker').blur();
+    // enable touch events on datepicker
+    // $(".increment, .decrement").hammer({domEvents: true}).on("tap", function(event){
+    //     this.click()
+    //     $(this).unbind('click');
+    // });
+    $("#contest :input").prop("disabled", true);
+  } else {
+    $("#contest :input").prop("disabled", false);
+  }
+});
+
+$('.datepicker').on('blur', function(){
+  $("#contest :input").prop("disabled", false);
 });

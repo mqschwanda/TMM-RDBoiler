@@ -121,7 +121,7 @@ html, body{
   display: none;
 }
 
-.again-button{
+.again-button, .gate-btn{
   background-color: transparent;
   border: 6px solid white;
   border-radius: 12px;
@@ -210,3 +210,6 @@ html, body{
   text-decoration: none;
 }
 
+.img-responsive{
+  margin: 0 auto;
+}

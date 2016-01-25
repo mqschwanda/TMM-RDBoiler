@@ -3,17 +3,6 @@ activate :google_analytics do |ga|
   # Property ID (default = nil)
   ga.tracking_id = 'UA-72841429-1'
 
-  # Tracking across a domain and its subdomains (default = nil)
-  ga.domain_name = 'https://rdallie.herokuapp.com'
-
-  # Tracking in development environment (default = true)
-  ga.development = true
-
-  # Compress the JavaScript code (default = false)
-  ga.minify = true
-
-  # Output style - :html includes <script> tag (default = :html)
-  ga.output = :html
 end
 
 ###

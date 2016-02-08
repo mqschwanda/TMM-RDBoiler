@@ -1489,21 +1489,21 @@ $.cf = {
 
 			//-----------------------------------------------------------------------
 
-			$(oDTP.element).find('.dtpicker-close').click(function(e)
+			$(oDTP.element).find('.dtpicker-close').hammer({domEvents: true}).on("tap", function(e)
 			{
 				if(oDTP.settings.buttonClicked)
 					oDTP.settings.buttonClicked.call(oDTP, "CLOSE", oDTP.oData.oInputElement);
 				oDTP._hidePicker("");
 			});
 
-			$(oDTP.element).find('.dtpicker-buttonSet').click(function(e)
+			$(oDTP.element).find('.dtpicker-buttonSet').hammer({domEvents: true}).on("tap", function(e)
 			{
 				if(oDTP.settings.buttonClicked)
 					oDTP.settings.buttonClicked.call(oDTP, "SET", oDTP.oData.oInputElement);
 				oDTP._setButtonAction(false);
 			});
 
-			$(oDTP.element).find('.dtpicker-buttonClear').click(function(e)
+			$(oDTP.element).find('.dtpicker-buttonClear').hammer({domEvents: true}).on("tap", function(e)
 			{
 				if(oDTP.settings.buttonClicked)
 					oDTP.settings.buttonClicked.call(oDTP, "CLEAR", oDTP.oData.oInputElement);
@@ -1512,91 +1512,91 @@ $.cf = {
 
 			// ----------------------------------------------------------------------------
 
-			$(oDTP.element).find(".day .increment, .day .increment *").click(function(e)
+			$(oDTP.element).find(".day .increment, .day .increment *").hammer({domEvents: true}).on("tap", function(e)
 			{
 				oDTP.oData.iCurrentDay++;
 				oDTP._setCurrentDate();
 				oDTP._setOutputOnIncrementOrDecrement();
 			});
 
-			$(oDTP.element).find(".day .decrement, .day .decrement *").click(function(e)
+			$(oDTP.element).find(".day .decrement, .day .decrement *").hammer({domEvents: true}).on("tap", function(e)
 			{
 				oDTP.oData.iCurrentDay--;
 				oDTP._setCurrentDate();
 				oDTP._setOutputOnIncrementOrDecrement();
 			});
 
-			$(oDTP.element).find(".month .increment, .month .increment *").click(function(e)
+			$(oDTP.element).find(".month .increment, .month .increment *").hammer({domEvents: true}).on("tap", function(e)
 			{
 				oDTP.oData.iCurrentMonth++;
 				oDTP._setCurrentDate();
 				oDTP._setOutputOnIncrementOrDecrement();
 			});
 
-			$(oDTP.element).find(".month .decrement, .month .decrement *").click(function(e)
+			$(oDTP.element).find(".month .decrement, .month .decrement *").hammer({domEvents: true}).on("tap", function(e)
 			{
 				oDTP.oData.iCurrentMonth--;
 				oDTP._setCurrentDate();
 				oDTP._setOutputOnIncrementOrDecrement();
 			});
 
-			$(oDTP.element).find(".year .increment, .year .increment *").click(function(e)
+			$(oDTP.element).find(".year .increment, .year .increment *").hammer({domEvents: true}).on("tap", function(e)
 			{
 				oDTP.oData.iCurrentYear++;
 				oDTP._setCurrentDate();
 				oDTP._setOutputOnIncrementOrDecrement();
 			});
 
-			$(oDTP.element).find(".year .decrement, .year .decrement *").click(function(e)
+			$(oDTP.element).find(".year .decrement, .year .decrement *").hammer({domEvents: true}).on("tap", function(e)
 			{
 				oDTP.oData.iCurrentYear--;
 				oDTP._setCurrentDate();
 				oDTP._setOutputOnIncrementOrDecrement();
 			});
 
-			$(oDTP.element).find(".hour .increment, .hour .increment *").click(function(e)
+			$(oDTP.element).find(".hour .increment, .hour .increment *").hammer({domEvents: true}).on("tap", function(e)
 			{
 				oDTP.oData.iCurrentHour++;
 				oDTP._setCurrentDate();
 				oDTP._setOutputOnIncrementOrDecrement();
 			});
 
-			$(oDTP.element).find(".hour .decrement, .hour .decrement *").click(function(e)
+			$(oDTP.element).find(".hour .decrement, .hour .decrement *").hammer({domEvents: true}).on("tap", function(e)
 			{
 				oDTP.oData.iCurrentHour--;
 				oDTP._setCurrentDate();
 				oDTP._setOutputOnIncrementOrDecrement();
 			});
 
-			$(oDTP.element).find(".minutes .increment, .minutes .increment *").click(function(e)
+			$(oDTP.element).find(".minutes .increment, .minutes .increment *").hammer({domEvents: true}).on("tap", function(e)
 			{
 				oDTP.oData.iCurrentMinutes += oDTP.settings.minuteInterval;
 				oDTP._setCurrentDate();
 				oDTP._setOutputOnIncrementOrDecrement();
 			});
 
-			$(oDTP.element).find(".minutes .decrement, .minutes .decrement *").click(function(e)
+			$(oDTP.element).find(".minutes .decrement, .minutes .decrement *").hammer({domEvents: true}).on("tap", function(e)
 			{
 				oDTP.oData.iCurrentMinutes -= oDTP.settings.minuteInterval;
 				oDTP._setCurrentDate();
 				oDTP._setOutputOnIncrementOrDecrement();
 			});
 
-			$(oDTP.element).find(".seconds .increment, .seconds .increment *").click(function(e)
+			$(oDTP.element).find(".seconds .increment, .seconds .increment *").hammer({domEvents: true}).on("tap", function(e)
 			{
 				oDTP.oData.iCurrentSeconds += oDTP.settings.secondsInterval;
 				oDTP._setCurrentDate();
 				oDTP._setOutputOnIncrementOrDecrement();
 			});
 
-			$(oDTP.element).find(".seconds .decrement, .seconds .decrement *").click(function(e)
+			$(oDTP.element).find(".seconds .decrement, .seconds .decrement *").hammer({domEvents: true}).on("tap", function(e)
 			{
 				oDTP.oData.iCurrentSeconds -= oDTP.settings.secondsInterval;
 				oDTP._setCurrentDate();
 				oDTP._setOutputOnIncrementOrDecrement();
 			});
 
-			$(oDTP.element).find(".meridiem .dtpicker-compButton, .meridiem .dtpicker-compButton *").click(function(e)
+			$(oDTP.element).find(".meridiem .dtpicker-compButton, .meridiem .dtpicker-compButton *").hammer({domEvents: true}).on("tap", function(e)
 			{
 				if($.cf._compare(oDTP.oData.sCurrentMeridiem, "AM"))
 				{

@@ -184,8 +184,11 @@ $('.datepicker').on('focus', function(){
     $('.datepicker').blur();
     // enable touch events on datepicker
     // $(".increment, .decrement").hammer({domEvents: true}).on("tap", function(event){
-    //     this.click()
-    //     $(this).unbind('click');
+    //     this.click();
+    //     event.stopPropagation();
+    //     event.preventDefault();
+    //     event.gesture.preventDefault();
+    //     event.gesture.stopDetect();
     // });
     $("#contest :input").prop("disabled", true);
   } else {

@@ -1,3 +1,28 @@
+// word gate
+$(function(){
+
+  var x ='y',
+  z = 'l',
+  u = 'p',
+  r = 'a';
+
+  $('#word-gate button').on('click', function(e){
+    e.preventDefault();
+    var codeWord = $('#code-word').val();
+    if(codeWord === ""){
+      $.growl.error({ message: "Please enter the code word." });
+    } else {
+      codeWord = codeWord.toString().toLowerCase().trim();
+      if(codeWord != (u+z+r+x)){
+        $.growl.error({ message: "Sorry, that code word is incorrect!" });
+      } else {
+        $.growl.notice({ message: "Success! Please enter your birthday." });
+        $('#word-gate').hide();
+        $('#age-gate').parent().removeClass('hidden');
+      }
+    }
+  });
+});
 
 
 // Datepicker

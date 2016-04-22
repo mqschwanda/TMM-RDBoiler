@@ -15,21 +15,23 @@ html, body{
 }
 
 #background, #content{
-  background: #fef4f6; /* Old browsers */
-  background: -moz-linear-gradient(top,  #fef4f6 0%, #f78ba0 100%); /* FF3.6-15 */
-  background: -webkit-linear-gradient(top,  #fef4f6 0%,#f78ba0 100%); /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to bottom,  #fef4f6 0%,#f78ba0 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fef4f6', endColorstr='#f78ba0',GradientType=0 ); /* IE6-9 */
+  background-image: url('https://s3.amazonaws.com/myfangate.com/playitforward/stars.jpg'); /* Old browsers */
+  background-repeat: repeat;
+  // background: -moz-linear-gradient(top,  #fef4f6 0%, #f78ba0 100%); /* FF3.6-15 */
+  // background: -webkit-linear-gradient(top,  #fef4f6 0%,#f78ba0 100%); /* Chrome10-25,Safari5.1-6 */
+  // background: linear-gradient(to bottom,  #fef4f6 0%,#f78ba0 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  // filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fef4f6', endColorstr='#f78ba0',GradientType=0 ); /* IE6-9 */
 }
 
 #content{
-  margin-left: 0;
-  margin-right: 0;
+  // margin-left: 0;
+  // margin-right: 0;
   width: 100%;
+  max-width: 1170px;
 }
 
 #background{
-  position: absolute;
+  position: fixed;
   height: 100%;
   width: 100%;
   top: 0;
@@ -46,7 +48,7 @@ html, body{
   position: relative;
   bottom: 0;
   text-align: center;
-  background-color: #f78ba0;
+  background-color: #000;
 }
 
 .footer{
@@ -82,14 +84,18 @@ html, body{
 
 // contest
 
-#contest, #age-gate{
+#contest, #age-gate, #word-gate{
   label, .terms, .rules{
-    font-family:'TwCenMT-Bold';
+    font-family: 'PlacardMT-BoldCondensed';
     text-transform: uppercase;
+    color: #fff;
+  }
+  .error{
+    color: red;
   }
   a{
     text-decoration: underline;
-    color: black;
+    color: #fff;
   }
   .disc{
     color: white;
@@ -99,18 +105,18 @@ html, body{
     padding: 2% 0;
   }
   .disney-submit{
-    background: url("https://s3.amazonaws.com/myfangate.com/rdallie/enterbutton.png") no-repeat scroll 0 0 transparent;
+    background: url("https://s3.amazonaws.com/myfangate.com/playitforward/enterbutton.png") no-repeat scroll 0 0 transparent;
     background-size: cover;
     width: 190px;
-    height: 60px;
+    height: 87px;
     border-color: transparent;
   }
 }
 
 .form-control{
   border-radius: 20px;
-  background-color: #f9e1e5;
-  border-color: #d696a1;
+  background-color: #fff;
+  border-color: #006ea1;
 }
 
 .error{
@@ -128,13 +134,17 @@ html, body{
   text-transform: uppercase;
   color: white;
   font-size: 30px;
-  letter-spacing: -2px;
-  font-family: 'TwCenMT-Bold';
+  font-family: 'PlacardMT-BoldCondensed';
   padding: 0 14px;
+  text-shadow: 0px 0px 10px #70f0f1;
+  box-shadow: 0px 0px 10px 1px #70f0f1;
+  background: linear-gradient(180deg, #ffffff 0%, #FFFFFF 25%, #FFFFFF 50%, #FFFFFF 75%, #96bed3 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 #thankyou{
-  font-family: 'TwCenMT-Bold';
+  font-family: 'PlacardMT-BoldCondensed';
   text-transform: uppercase;
   color: white;
 }
@@ -212,4 +222,28 @@ html, body{
 
 .img-responsive{
   margin: 0 auto;
+}
+
+.col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12,
+.col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12,
+.col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12,
+.col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12{
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+.contesting{
+  padding-left: 15px !important;
+  padding-right: 15px !important;
+}
+
+.entries{
+  h4{
+    font-family: 'PlacardMT-BoldCondensed';
+    color: white !important;
+    text-transform: uppercase;
+    margin: 0 auto !important;
+  }
+  margin-top: 2%;
+  margin-bottom: 5%;
 }

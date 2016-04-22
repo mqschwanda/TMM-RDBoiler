@@ -1,9 +1,9 @@
 # Google analytics
-activate :google_analytics do |ga|
-  # Property ID (default = nil)
-  ga.tracking_id = 'UA-72841429-1'
+# activate :google_analytics do |ga|
+#   # Property ID (default = nil)
+#   ga.tracking_id = 'UA-72841429-1'
 
-end
+# end
 
 ###
 # Page options, layouts, aliases and proxies
@@ -31,7 +31,7 @@ set :images_dir, 'images'
 set :fonts_dir,  'fonts-folder'
 # Reload the browser automatically whenever files change
 configure :development do
-  # activate :livereload
+  activate :livereload
   # set :debug_assets, true
   # activate :minify_css
   # activate :minify_html
@@ -52,9 +52,9 @@ end
 # Build-specific configuration
 configure :build do
   # # Minify CSS on build
-  # activate :minify_css
+  activate :minify_css
   # # Minify HTML on build
-  # activate :minify_html
+  activate :minify_html
   # # Minify Javascript on build
-  # activate :minify_javascript
+  activate :minify_javascript
 end

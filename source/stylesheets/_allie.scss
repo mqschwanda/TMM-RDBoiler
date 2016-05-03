@@ -1,3 +1,5 @@
+$orange: #f26649;
+
 #hidden_iframe{
   display: none;
 }
@@ -15,8 +17,9 @@ html, body{
 }
 
 #background, #content{
-  background-image: url('https://s3.amazonaws.com/myfangate.com/playitforward/stars.jpg'); /* Old browsers */
-  background-repeat: repeat;
+  // background-image: url('https://s3.amazonaws.com/myfangate.com/playitforward/stars.jpg'); /* Old browsers */
+  // background-repeat: repeat;
+  background-color: #0067a4;
   // background: -moz-linear-gradient(top,  #fef4f6 0%, #f78ba0 100%); /* FF3.6-15 */
   // background: -webkit-linear-gradient(top,  #fef4f6 0%,#f78ba0 100%); /* Chrome10-25,Safari5.1-6 */
   // background: linear-gradient(to bottom,  #fef4f6 0%,#f78ba0 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
@@ -85,8 +88,13 @@ html, body{
 // contest
 
 #contest, #age-gate, #word-gate{
-  label, .terms, .rules{
-    font-family: 'PlacardMT-BoldCondensed';
+  label, .terms{
+    font-family: 'cubanoregular';
+    text-transform: uppercase;
+    color: #fff;
+  }
+  .rules{
+    font-family:'PlacardMT-Condensed';
     text-transform: uppercase;
     color: #fff;
   }
@@ -99,17 +107,22 @@ html, body{
   }
   .disc{
     color: white;
-    font-family: 'PlacardMT-BoldCondensed';
+    font-family: 'cubanoregular';
   }
   .submit-wrap{
     padding: 2% 0;
   }
   .disney-submit{
-    background: url("https://s3.amazonaws.com/myfangate.com/playitforward/enterbutton.png") no-repeat scroll 0 0 transparent;
+    background: url("https://s3.amazonaws.com/myfangate.com/rdvipguest/enter-button.png") no-repeat scroll 0 0 transparent;
     background-size: cover;
     width: 190px;
     height: 87px;
     border-color: transparent;
+  }
+  .phone{
+    color: $orange;
+    text-transform: none;
+    font-family:'PlacardMT-Condensed';
   }
 }
 
@@ -124,7 +137,7 @@ html, body{
 }
 
 #content, #footer{
-  display: none;
+  // display: none;
 }
 
 .again-button, .gate-btn{
@@ -249,11 +262,29 @@ html, body{
 
 .entries{
   h4{
-    font-family: 'PlacardMT-BoldCondensed';
+    font-family: 'cubanoregular';
     color: white !important;
     text-transform: uppercase;
     margin: 0 auto !important;
   }
   margin-top: 2%;
   margin-bottom: 5%;
+}
+
+.container-fluid{
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+.prizing-image{
+  max-width: 1170px;
+}
+
+.prizing-wrap{
+  text-align: center;
+  border-top: solid 25px white;
+  border-bottom: solid 25px $orange;
+  background-color: white;
+  margin-top: 2% !important;
+  margin-bottom: 5% !important;
 }

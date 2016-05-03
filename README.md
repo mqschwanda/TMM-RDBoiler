@@ -7,7 +7,7 @@ There is also a partial/template for meta info on most social networks.
 
 ####Technologies Used
 * Ruby
-* Middleman v4
+* Middleman 3
 * ERB
 * HTML5
 * CSS3
@@ -15,7 +15,6 @@ There is also a partial/template for meta info on most social networks.
 * jQuery
 * Font Awesome
 * Minify HTML gem
-* GA gem
 
 ####Getting Started
 Clone the repo using the GUI or terminal. To do so in terminal, use the following:

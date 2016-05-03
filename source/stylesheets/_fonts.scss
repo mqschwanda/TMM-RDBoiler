@@ -1,21 +1,25 @@
 @font-face {
-  font-family:'TwCenMT-Bold';
-  src: url('../fonts/TwCenMT-Bold_gdi.eot');
-  src: url('../fonts/TwCenMT-Bold_gdi.eot?#iefix') format('embedded-opentype'),
-    url('../fonts/TwCenMT-Bold_gdi.woff') format('woff'),
-    url('../fonts/TwCenMT-Bold_gdi.ttf') format('truetype'),
-    url('../fonts/TwCenMT-Bold_gdi.otf') format('opentype'),
-    url('../fonts/TwCenMT-Bold_gdi.svg#TwCenMT-Bold') format('svg');
-  font-weight: 700;
-  font-style: normal;
-  font-stretch: normal;
-  unicode-range: U+0020-25CA;
+    font-family: 'cubanoregular';
+    src: url('../fonts/cubano-regular-webfont.eot');
+    src: url('../fonts/cubano-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/cubano-regular-webfont.woff2') format('woff2'),
+         url('../fonts/cubano-regular-webfont.woff') format('woff'),
+         url('../fonts/cubano-regular-webfont.ttf') format('truetype'),
+         url('../fonts/cubano-regular-webfont.svg#cubanoregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
 }
 
 @font-face {
-  font-family: 'PlacardMT-BoldCondensed';
-  src: url('../fonts/PlacardMT-BoldCondensed.eot?') format('eot'),
-       url('../fonts/PlacardMT-BoldCondensed.woff') format('woff'),
-       url('../fonts/PlacardMT-BoldCondensed.ttf')  format('truetype'),
-       url('../fonts/PlacardMT-BoldCondensed.svg#PlacardMT-BoldCondensed') format('svg');
+  font-family:'PlacardMT-Condensed';
+  src: url('../fonts/PlacardMT-Condensed_gdi.eot');
+  src: url('../fonts/PlacardMT-Condensed_gdi.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/PlacardMT-Condensed_gdi.woff') format('woff'),
+    url('../fonts/PlacardMT-Condensed_gdi.ttf') format('truetype'),
+    url('../fonts/PlacardMT-Condensed_gdi.svg#PlacardMT-Condensed') format('svg');
+  font-weight: 400;
+  font-style: normal;
+  font-stretch: normal;
+  unicode-range: U+0020-25CA;
 }

@@ -190,7 +190,7 @@ $("#age-gate").validate({
   submitHandler: function() {
     $('#gate').fadeOut( 500 );
     setTimeout(function(){
-      $('#content').fadeIn();
+      $('.content').fadeIn();
       $('#footer').fadeIn();
     }, 500);
   }

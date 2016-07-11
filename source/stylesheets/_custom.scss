@@ -1,2 +1,275 @@
-// PUT CUSTOM SCSS / SASS HERE
-@import "allie";
+$orange: #f26649;
+
+#hidden_iframe{
+  display: none;
+}
+
+.full-w{
+  width: 100%;
+}
+.pad-top{
+  padding-top: 4%;
+}
+html, body{
+  min-height: 100%;
+  margin: 0px; /* Remove the margin around the body */
+  overflow-x: hidden;
+}
+
+#background, #content{
+  // background-image: url('https://s3.amazonaws.com/myfangate.com/playitforward/stars.jpg'); /* Old browsers */
+  // background-repeat: repeat;
+  background-color: #000;
+  // background: -moz-linear-gradient(top,  #fef4f6 0%, #f78ba0 100%); /* FF3.6-15 */
+  // background: -webkit-linear-gradient(top,  #fef4f6 0%,#f78ba0 100%); /* Chrome10-25,Safari5.1-6 */
+  // background: linear-gradient(to bottom,  #fef4f6 0%,#f78ba0 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  // filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fef4f6', endColorstr='#f78ba0',GradientType=0 ); /* IE6-9 */
+}
+
+#content{
+  // margin-left: 0;
+  // margin-right: 0;
+  width: 100%;
+  max-width: 1170px;
+}
+
+#background{
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+}
+
+// promo & footer
+
+#footer{
+  width: 100%;
+  position: relative;
+  bottom: 0;
+  text-align: center;
+  background-color: #000;
+}
+
+.footer{
+  width: 100%;
+  position: relative;
+}
+
+@media only screen and (min-width : 320px) {
+  .promoimage{
+    width: 140%;
+    margin-left: -20%;
+    padding-top: 2%;
+  }
+  .footer{
+    right: -14%;
+  }
+}
+
+@media only screen and (min-width : 992px) {
+  .promoimage{
+    width: 100%;
+    margin-left: 0;
+    padding-top: 0;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  .footer{
+    right: -45px;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+}
+
+// contest
+
+#contest, #age-gate, #word-gate{
+  label, .terms{
+    font-family: 'cubanoregular';
+    text-transform: uppercase;
+    color: #fff;
+  }
+  .rules{
+    font-family:'PlacardMT-Condensed';
+    text-transform: uppercase;
+    color: #fff;
+  }
+  .error{
+    color: red;
+  }
+  a{
+    text-decoration: underline;
+    color: #fff;
+  }
+  .disc{
+    color: white;
+    font-family: 'cubanoregular';
+  }
+  .submit-wrap{
+    padding: 2% 0;
+  }
+  .disney-submit{
+    background: url("https://s3.amazonaws.com/myfangate.com/rdvipguest/enter-button.png") no-repeat scroll 0 0 transparent;
+    background-size: cover;
+    width: 190px;
+    height: 87px;
+    border-color: transparent;
+  }
+  .phone{
+    color: $orange;
+    text-transform: none;
+    font-family:'PlacardMT-Condensed';
+  }
+}
+
+.form-control{
+  border-radius: 20px;
+  background-color: #fff;
+  border-color: #006ea1;
+}
+
+.error{
+  color: red;
+}
+
+.content, #footer{
+  display: none;
+}
+
+.again-button, .gate-btn{
+  background-color: transparent;
+  border: 6px solid white;
+  border-radius: 12px;
+  text-transform: uppercase;
+  color: white;
+  font-size: 30px;
+  font-family: 'cubanoregular';
+  padding: 0 14px;
+}
+
+#thankyou{
+  font-family: 'PlacardMT-BoldCondensed';
+  text-transform: uppercase;
+  color: white;
+}
+
+// custom datepicker
+
+.dtpicker-content{
+  border-radius: 8px;
+  box-shadow: 0px 0px 8px 7px rgba(0,0,0,0.2);
+  font-family: 'PlacardMT-BoldCondensed';
+  background-color: #f3f3f3 !important;
+}
+
+.dtpicker-button{
+  border-radius: 5px;
+}
+
+.dtpicker-compOutline{
+  border: 1px solid #ccc;
+  border-radius: 11px;
+  margin-left: 1.65% !important;
+  margin-right: 1.65% !important;
+  overflow: hidden;
+  background: #d3d3d3 !important;
+  background: -moz-linear-gradient(top,  #d3d3d3 15%, #ffffff 50%, #d3d3d3 85%) !important;
+  background: -webkit-linear-gradient(top,  #d3d3d3 15%,#ffffff 50%,#d3d3d3 85%) !important;
+  background: linear-gradient(top,  #d3d3d3 15%,#ffffff 50%,#d3d3d3 85%) !important;
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d3d3d3', endColorstr='#d3d3d3',GradientType=0 ) !important;
+}
+
+.dtpicker-comp3 {
+    width: 30% !important;
+}
+
+.increment, .decrement{
+  display: block;
+  text-decoration: none !important;
+  background-color: #E5E5E5 !important;
+  color: #333333 !important;
+  margin: 40px auto !important;
+  position: relative !important;
+  text-align: center !important;
+  text-shadow: 0 -1px 0 rgba(102, 102, 102, 0.5), 0 2px 1px rgba(255, 255, 255, 0.6) !important;
+  width: 110%;
+  margin-left: -5% !important;
+  text-decoration: none;
+}
+
+.increment{
+  margin-top: -5px !important;
+}
+.decrement{
+  margin-bottom: -4px !important;
+}
+
+.dtpicker-compValue{
+  color: black !important;
+  background-color: transparent !important;
+}
+
+.dtpicker-title, .dtpicker-close, .dtpicker-value{
+  color: black !important;
+}
+
+.dtpicker-buttonSet{
+  background-color: #3c9d3e !important;
+  text-transform: uppercase;
+}
+
+.dtpicker-buttonClear{
+  background-color: #c02133 !important;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.img-responsive{
+  margin: 0 auto;
+}
+
+.col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12,
+.col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12,
+.col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12,
+.col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12{
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+.contesting{
+  padding-left: 15px !important;
+  padding-right: 15px !important;
+}
+
+.entries{
+  h4{
+    font-family: 'cubanoregular';
+    color: white !important;
+    text-transform: uppercase;
+    margin: 0 auto !important;
+  }
+  margin-top: 2%;
+  margin-bottom: 5%;
+}
+
+.container-fluid{
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+.prizing-image{
+  max-width: 1170px;
+}
+
+.prizing-wrap{
+  text-align: center;
+  border-top: solid 25px white;
+  border-bottom: solid 25px $orange;
+  background-color: white;
+  margin-top: 2% !important;
+  margin-bottom: 5% !important;
+}

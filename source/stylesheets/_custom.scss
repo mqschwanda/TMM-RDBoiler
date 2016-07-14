@@ -88,14 +88,18 @@ html, body{
 
 // contest
 
+.rules, .privacy-policy{
+  font-family:'PlacardMT-Condensed';
+  text-transform: uppercase;
+  text-decoration: underline;
+}
+.rules{
+  color: #fff;
+}
+
 #contest, #age-gate, #word-gate{
   label, .terms{
     font-family:'FuturaStd-CondensedBold';
-    text-transform: uppercase;
-    color: #fff;
-  }
-  .rules{
-    font-family:'PlacardMT-Condensed';
     text-transform: uppercase;
     color: #fff;
   }

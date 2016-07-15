@@ -1,3 +1,38 @@
+function setCookie(cname, cvalue, exdays) {
+    var d = new Date();
+    d.setTime(d.getTime() + (exdays*24*60*60*1000));
+    var expires = "expires="+ d.toUTCString();
+    document.cookie = cname + "=" + cvalue + "; " + expires;
+}
+
+function getCookie(cname) {
+    var name = cname + "=";
+    var ca = document.cookie.split(';');
+    for(var i = 0; i <ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0)==' ') {
+            c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+            return c.substring(name.length,c.length);
+        }
+    }
+    return "";
+}
+
+function checkCookie(){
+  var clearedGate = getCookie('clearedGate');
+  if(clearedGate === "false"){
+    $('#age-gate').remove();
+    $('.col-xs-12.col-sm-8.col-sm-offset-2.pad-top').html('<h2 style="color: white;">You are not eligible.</h2>')
+    $('.col-xs-12.col-sm-8.col-sm-offset-2.pad-top').addClass('text-center');
+  }
+}
+
+$(function(){
+  checkCookie();
+});
+
 // word gate
 $(function(){
 
@@ -144,7 +179,7 @@ $("#contest").validate({
     // birthday
     'entry.328909515': {
       required: "You must enter your date of birth",
-      minAge: "You must be at least 13 years old."
+      minAge: "Sorry, you are not eligible."
     },
     'entry.1685083969': {
       number: "Phone number must be numbers only.",
@@ -180,11 +215,17 @@ $("#age-gate").validate({
   messages: {
     birthday: {
       required: "You must enter your date of birth",
-      minAge: "You must be at least 13 years old."
+      minAge: "You are not eligible."
     }
   },
   invalidHandler: function(form, validator) {
     growlz();
+    setTimeout(function(){
+      if($('.growl-message:contains("You are not eligible")').length > 0){
+        setCookie('clearedGate', false, 7);
+        checkCookie();
+      }
+    }, 100);
   },
   success: "valid",
   submitHandler: function() {

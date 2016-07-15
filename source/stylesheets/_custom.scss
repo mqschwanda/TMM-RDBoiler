@@ -283,3 +283,13 @@ html, body{
 .margin-top{
   line-height: 30px !important;
 }
+
+#age-gate{
+  label.error{
+    display: none !important;
+  }
+}
+
+#age-gate .error, #word-gate .error {
+  color: black !important;
+}

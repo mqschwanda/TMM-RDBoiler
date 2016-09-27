@@ -156,6 +156,9 @@ $("#contest").validate({
         number: true,
         minlength: 10,
         maxlength: 11
+    },
+    'entry.566148897': {
+      required: true
     }
   },
   messages: {
@@ -185,6 +188,9 @@ $("#contest").validate({
       number: "Phone number must be numbers only.",
       minlength: "Phone numbers must be at least 10 digits.",
       maxlength: "Phone numbers can be no longer than 11 digits."
+    },
+    'entry.566148897': {
+      required: "You must agree to the terms and rules."
     }
   },
   invalidHandler: function(form, validator) {
@@ -265,3 +271,11 @@ $('.datepicker').on('focus', function(){
 $('.datepicker').on('blur', function(){
   $("#contest :input").prop("disabled", false);
 });
+
+function delete_cookie( name ) {
+  document.cookie = name + '=; expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+}
+
+function deleteGateCookie(){
+  delete_cookie("clearedGate")
+}

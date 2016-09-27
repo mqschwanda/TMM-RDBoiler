@@ -24,7 +24,7 @@ function checkCookie(){
   var clearedGate = getCookie('clearedGate');
   if(clearedGate === "false"){
     $('#age-gate').remove();
-    $('.col-xs-12.col-sm-8.col-sm-offset-2.pad-top').html('<h2 style="color: white;">You are not eligible.</h2>')
+    $('.col-xs-12.col-sm-8.col-sm-offset-2.pad-top').html('<h2 class="not-eligible">You are <span>not</span> eligible.</h2>')
     $('.col-xs-12.col-sm-8.col-sm-offset-2.pad-top').addClass('text-center');
   }
 }
@@ -156,6 +156,9 @@ $("#contest").validate({
         number: true,
         minlength: 10,
         maxlength: 11
+    },
+    'entry.566148897': {
+      required: true
     }
   },
   messages: {
@@ -185,10 +188,20 @@ $("#contest").validate({
       number: "Phone number must be numbers only.",
       minlength: "Phone numbers must be at least 10 digits.",
       maxlength: "Phone numbers can be no longer than 11 digits."
+    },
+    'entry.566148897': {
+      required: "You must agree to the terms and rules."
     }
   },
   invalidHandler: function(form, validator) {
     growlz();
+  },
+  errorPlacement: function(error, element) {
+    if (element.attr("name") == "entry.566148897") {
+      error.insertAfter(".rd-check");
+    } else {
+      error.insertAfter(element);
+    }
   },
   success: "valid",
   submitHandler: function(form) {
@@ -197,6 +210,7 @@ $("#contest").validate({
     $.growl.notice({ message: "Thanks! We've received your entry." });
     setTimeout(function(){
       $('#contest').parent().html(successMsg).css('min-height', formH);
+      $('.entries').remove();
     }, 500);
     setTimeout(function(){
       $.scrollTo('#thankyou', 1000, { offset: 0, 'axis': 'y' });
@@ -265,3 +279,11 @@ $('.datepicker').on('focus', function(){
 $('.datepicker').on('blur', function(){
   $("#contest :input").prop("disabled", false);
 });
+
+function delete_cookie( name ) {
+  document.cookie = name + '=; expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+}
+
+function deleteGateCookie(){
+  delete_cookie("clearedGate")
+}

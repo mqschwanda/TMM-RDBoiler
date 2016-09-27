@@ -210,6 +210,7 @@ $("#contest").validate({
     $.growl.notice({ message: "Thanks! We've received your entry." });
     setTimeout(function(){
       $('#contest').parent().html(successMsg).css('min-height', formH);
+      $('.entries').remove();
     }, 500);
     setTimeout(function(){
       $.scrollTo('#thankyou', 1000, { offset: 0, 'axis': 'y' });

@@ -196,6 +196,13 @@ $("#contest").validate({
   invalidHandler: function(form, validator) {
     growlz();
   },
+  errorPlacement: function(error, element) {
+    if (element.attr("name") == "entry.566148897") {
+      error.insertAfter(".rd-check");
+    } else {
+      error.insertAfter(element);
+    }
+  },
   success: "valid",
   submitHandler: function(form) {
     formH = $('#contest').height();

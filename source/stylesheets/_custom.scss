@@ -293,3 +293,20 @@ html, body{
 #age-gate .error, #word-gate .error {
   color: black !important;
 }
+
+.blue-gradient{
+  background: rgb(27,36,70); /* Old browsers */
+  background: -moz-linear-gradient(45deg,  rgba(27,36,70,1) 0%, rgba(141,165,194,1) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(45deg,  rgba(27,36,70,1) 0%,rgba(141,165,194,1) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(45deg,  rgba(27,36,70,1) 0%,rgba(141,165,194,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1b2446', endColorstr='#8da5c2',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+.not-eligible{
+  color: white;
+  font-family:'PlacardMT-Condensed';
+  text-transform: uppercase;
+  span{
+    text-decoration: underline;
+  }
+}

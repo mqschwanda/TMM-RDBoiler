@@ -24,7 +24,7 @@ function checkCookie(){
   var clearedGate = getCookie('clearedGate');
   if(clearedGate === "false"){
     $('#age-gate').remove();
-    $('.col-xs-12.col-sm-8.col-sm-offset-2.pad-top').html('<h2 style="color: white;">You are not eligible.</h2>')
+    $('.col-xs-12.col-sm-8.col-sm-offset-2.pad-top').html('<h2 class="not-eligible">You are <span>not</span> eligible.</h2>')
     $('.col-xs-12.col-sm-8.col-sm-offset-2.pad-top').addClass('text-center');
   }
 }

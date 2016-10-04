@@ -157,9 +157,9 @@ $("#contest").validate({
         minlength: 10,
         maxlength: 11
     },
-    'entry.566148897': {
-      required: true
-    }
+    // 'entry.566148897': {
+    //   required: true
+    // }
   },
   messages: {
     // first name
@@ -189,9 +189,9 @@ $("#contest").validate({
       minlength: "Phone numbers must be at least 10 digits.",
       maxlength: "Phone numbers can be no longer than 11 digits."
     },
-    'entry.566148897': {
-      required: "You must agree to the terms and rules."
-    }
+    // 'entry.566148897': {
+    //   required: "You must agree to the terms and rules."
+    // }
   },
   invalidHandler: function(form, validator) {
     growlz();

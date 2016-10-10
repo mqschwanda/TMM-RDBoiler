@@ -243,6 +243,10 @@ $("#age-gate").validate({
   },
   success: "valid",
   submitHandler: function() {
+    $('#entry_328909515').val($('input[name=birthday]').val());
+    $('#entry_328909515').hide();
+    $('#entry_328909515').prev('label').hide();
+    // $('#entry_328909515').prop('disabled', true);
     $('#gate').fadeOut( 500 );
     setTimeout(function(){
       $('.content').fadeIn();

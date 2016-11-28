@@ -1,4 +1,4 @@
-# RD Country Forever Country Sweepstakes
+# RD Country Cruising Into The Holidays
 
 ####What does it do?
 This boilerplate is set up to increase my workflow. Hopefully, this can also help you on your way.
@@ -19,16 +19,16 @@ There is also a partial/template for meta info on most social networks.
 ####Getting Started
 Clone the repo using the GUI or terminal. To do so in terminal, use the following:
 ```shell
-git clone https://github.com/dannyvassallo/rdforevercountry.git
-cd rdforevercountry
+git clone https://github.com/dannyvassallo/rdcruising.git
+cd rdcruising
 ```
 
-From the "rdforevercountry" directory, install the gems by running the following:
+From the "rdcruising" directory, install the gems by running the following:
 ```shell
 bundle install
 ```
 
-To fire up the server while in the "rdforevercountry" directory use this command:
+To fire up the server while in the "rdcruising" directory use this command:
 ```shell
 middleman s
 ```
@@ -44,7 +44,7 @@ If you find yourself curious as to what directory you are in use the following i
 ```shell
 pwd
 ```
-It should turn up "rdforevercountry"
+It should turn up "rdcruising"
 
 ####Analytics Setup
 

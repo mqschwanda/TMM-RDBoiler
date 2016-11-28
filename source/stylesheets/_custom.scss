@@ -20,7 +20,7 @@ html, body{
 #background, #content{
   // background-image: url('https://s3.amazonaws.com/myfangate.com/playitforward/stars.jpg'); /* Old browsers */
   // background-repeat: repeat;
-  background-color: #000;
+  background-color: #c12133;
   // background: -moz-linear-gradient(top,  #fef4f6 0%, #f78ba0 100%); /* FF3.6-15 */
   // background: -webkit-linear-gradient(top,  #fef4f6 0%,#f78ba0 100%); /* Chrome10-25,Safari5.1-6 */
   // background: linear-gradient(to bottom,  #fef4f6 0%,#f78ba0 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
@@ -52,7 +52,7 @@ html, body{
   position: relative;
   bottom: 0;
   text-align: center;
-  background-color: #000;
+  background-color: #c12133;
 }
 
 .footer{
@@ -105,9 +105,9 @@ html, body{
   label, .terms{
     font-family:'FuturaStd-CondensedBold';
     text-transform: uppercase;
-    color: #ffdd56;
+    color: #71d7d5;
     a{
-      color: #ffdd56
+      color: #71d7d5
     }
   }
   .error{
@@ -125,7 +125,7 @@ html, body{
     padding: 2% 0;
   }
   .disney-submit{
-    background: url("https://s3.amazonaws.com/myfangate.com/rdforevercountry/enter-button.png") no-repeat scroll 0 0 transparent;
+    background: url("https://s3-us-west-2.amazonaws.com/rdcruising/enter-button.png") no-repeat scroll 0 0 transparent;
     background-size: cover;
     width: 190px;
     height: 87px;
@@ -141,7 +141,7 @@ html, body{
 .form-control{
   border-radius: 20px;
   background-color: #fff;
-  border-color: #006ea1;
+  border-color: #71d7d5;
 }
 
 .error{
@@ -282,7 +282,7 @@ html, body{
   border-bottom: 5px white solid;
   text-align: center;
   padding-top: 5% !important;
-  background-color: #6b757c;
+  background-color: #c12133;
   padding-bottom: 5% !important;
   -webkit-box-shadow: inset 0px 0px 100px -20px rgba(0,0,0,0.75);
   -moz-box-shadow: inset 0px 0px 100px -20px rgba(0,0,0,0.75);
@@ -310,13 +310,13 @@ html, body{
   color: black !important;
 }
 
-.blue-gradient{
-  background: rgb(27,36,70); /* Old browsers */
-  background: -moz-linear-gradient(45deg,  rgba(27,36,70,1) 0%, rgba(141,165,194,1) 100%); /* FF3.6-15 */
-  background: -webkit-linear-gradient(45deg,  rgba(27,36,70,1) 0%,rgba(141,165,194,1) 100%); /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(45deg,  rgba(27,36,70,1) 0%,rgba(141,165,194,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1b2446', endColorstr='#8da5c2',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
-}
+// .blue-gradient{
+//   background: rgb(27,36,70); /* Old browsers */
+//   background: -moz-linear-gradient(45deg,  rgba(27,36,70,1) 0%, rgba(141,165,194,1) 100%); /* FF3.6-15 */
+//   background: -webkit-linear-gradient(45deg,  rgba(27,36,70,1) 0%,rgba(141,165,194,1) 100%); /* Chrome10-25,Safari5.1-6 */
+//   background: linear-gradient(45deg,  rgba(27,36,70,1) 0%,rgba(141,165,194,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+//   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1b2446', endColorstr='#8da5c2',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+// }
 
 .not-eligible{
   color: white;
@@ -380,17 +380,17 @@ html, body{
   }
 }
 
-@media screen and (max-width: 640px){
-  .header-image{
-    z-index: 10;
-    position: relative;
-    width: 130%;
-    margin-left: -15%;
-    margin-top: -16%;
-    background: rgb(27,36,70); /* Old browsers */
-    background: -moz-linear-gradient(45deg,  rgba(27,36,70,1) 0%, rgba(141,165,194,1) 100%); /* FF3.6-15 */
-    background: -webkit-linear-gradient(45deg,  rgba(27,36,70,1) 0%,rgba(141,165,194,1) 100%); /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(45deg,  rgba(27,36,70,1) 0%,rgba(141,165,194,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1b2446', endColorstr='#8da5c2',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
-  }
-}
+// @media screen and (max-width: 640px){
+//   .header-image{
+//     z-index: 10;
+//     position: relative;
+//     width: 130%;
+//     margin-left: -15%;
+//     margin-top: -16%;
+//     background: rgb(27,36,70); /* Old browsers */
+//     background: -moz-linear-gradient(45deg,  rgba(27,36,70,1) 0%, rgba(141,165,194,1) 100%); /* FF3.6-15 */
+//     background: -webkit-linear-gradient(45deg,  rgba(27,36,70,1) 0%,rgba(141,165,194,1) 100%); /* Chrome10-25,Safari5.1-6 */
+//     background: linear-gradient(45deg,  rgba(27,36,70,1) 0%,rgba(141,165,194,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+//     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1b2446', endColorstr='#8da5c2',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+//   }
+// }

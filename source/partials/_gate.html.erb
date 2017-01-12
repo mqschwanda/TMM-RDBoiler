@@ -1,43 +1,21 @@
 <div id="gate" class="container">
   <div class="row">
-    <div class="col-xs-12 col-xs-offset-0 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3 col-lg-6 col-lg-offset-3">
-      <img class="full-w" src="https://s3-us-west-2.amazonaws.com/rdcruising/agegateheader.png">
+    <div class="col-xs-6 col-xs-offset-3 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3 col-lg-6 col-lg-offset-3">
+      <img class="full-w" src="/images/radio-disney-logo.svg.png">
     </div>
   </div>
-<!--   <div class="col-xs-12 col-sm-8 col-sm-offset-2 pad-top">
-    <form id="word-gate" role="form">
-      <div class="form-group text-center">
-        <label for="word-gate">Please enter the code word:</label>
-        <input id="code-word" type="text" name="word-gate" value="" class="form-control" dir="auto">
-      </div>
-      <div class="submit-wrap text-center">
-        <button class="word-gate-btn gate-btn">NEXT</button>
-      </div>
-      <p class="text-center">
-        <a class="rules" href="http://www.radiodisneyapp.com/rules" target="_blank">Official Rules</a>
-      </p>
-    </form>
-  </div> -->
   <div class="col-xs-12 col-sm-8 col-sm-offset-2 pad-top">
     <form id="age-gate" role="form">
-      <div class="form-group text-center">
+      <div class="form-group text-center secondary-text">
         <label for="birthday">What is your birthday?</label>
-        <input type="text" name="birthday" value="" class="form-control datepicker" id="entry_328909515" dir="auto" aria-label="Birthday  " title="" required data-field="date" readonly>
+        <input id="birthday-input" placeholder="MM/DD/YYYY" type="text" name="birthday" value="" class="form-control datepicker text-center" id="entry_328909515" dir="auto" aria-label="Birthday" title="" required data-field="date" readonly>
       </div>
-      <div class="submit-wrap text-center">
+      <!-- gate submit button -->
+      <div class="submit-wraper text-center">
         <button type="submit" class="gate-btn">GO</button>
       </div>
-      <p class="text-center">
-        <a class="rules margin-top" href="http://www.radiodisneyapp.com/rules" target="_blank">Official Rules</a>
-        <br>
-        <a class="rules margin-top" href="https://disneytermsofuse.com/" target="_blank">Terms Of Use</a>
-        <br>
-        <a class="rules margin-top" href="https://disneyprivacycenter.com/" target="_blank">Privacy Policy</a>
-        <br>
-        <a class="rules margin-top" href="https://disneyprivacycenter.com/notice-to-california-residents/" target="_blank">Your California Privacy Rights</a>
-        <br>
-        <a class="rules margin-top" href="https://disneyprivacycenter.com/kids-privacy-policy/english/" target="_blank">Children's Online Privacy Policy</a>
-      </p>
+      <!-- contest terms and conditions -->
+      <%= partial 'partials/terms' %>
     </form>
   </div>
 </div>

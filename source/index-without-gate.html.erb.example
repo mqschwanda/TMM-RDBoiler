@@ -2,7 +2,7 @@
 title: Radio Disney - Boilerplate
 ---
 <div id="background"></div>
-<div class="container-fluid content">
+<div class="container-fluid">
   <%= partial 'partials/header' %>
   <div id="content-container">
     <%= partial 'partials/prize' %>
@@ -18,4 +18,3 @@ title: Radio Disney - Boilerplate
     </div>
   </div>
 </div>
-<%= partial 'partials/gate' %>

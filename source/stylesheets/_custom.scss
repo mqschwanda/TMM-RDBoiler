@@ -1,42 +1,44 @@
-$orange: #f26649;
-$pink: #fff;
-
-#hidden_iframe{
-  display: none;
+/***
+  Custom styling
+***/
+$primaryColor: #a81026;
+$secondaryColor: #1d82d2;
+$accentColor: #000000;
+$errorColor: #000000;
+$buttonColor: #000000;
+@font-face {
+  font-family: 'Prize_Font';
+  src: url('../fonts/Ranger_Italic.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-stretch: normal;
+  unicode-range: U+0020-25CA;
+}
+body{ // background image:
+  // background-image: url('https://placehold.it/900x2000');
+}
+.disney-submit{ // contest form submit button:
+  background-image: url("https://placehold.it/190x87");
 }
 
-.full-w{
-  width: 100%;
-}
-.pad-top{
-  padding-top: 4%;
-}
+/***
+  General styling
+***/
 html, body{
   min-height: 100%;
   margin: 0px; /* Remove the margin around the body */
   overflow-x: hidden;
 }
-
-#background, #content{
-  // background-image: url('https://s3.amazonaws.com/myfangate.com/playitforward/stars.jpg'); /* Old browsers */
-  // background-repeat: repeat;
-  background-color: #c12133;
-  // background: -moz-linear-gradient(top,  #fef4f6 0%, #f78ba0 100%); /* FF3.6-15 */
-  // background: -webkit-linear-gradient(top,  #fef4f6 0%,#f78ba0 100%); /* Chrome10-25,Safari5.1-6 */
-  // background: linear-gradient(to bottom,  #fef4f6 0%,#f78ba0 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  // filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fef4f6', endColorstr='#f78ba0',GradientType=0 ); /* IE6-9 */
+body{
+  background-color: white;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: scroll;
+  background-position: top center;
 }
-
-#content{
-  // margin-left: 0;
-  // margin-right: 0;
-  width: 100%;
-  max-width: 1170px;
-}
-
 #background{
   position: fixed;
-  height: 100%;
+  min-height: 100%;
   width: 100%;
   top: 0;
   bottom: 0;
@@ -45,143 +47,169 @@ html, body{
   z-index: -1;
 }
 
-// promo & footer
-
-#footer{
-  width: 100%;
-  position: relative;
-  bottom: 0;
-  text-align: center;
-  background-color: #c12133;
+// custom classes
+.content { // hide content untill gate is opened
+  display: none !important;
+}
+.hidden{ // make element hidden
+  display: none !important;
+}
+.full-w{ // make full width
+  width: 100% !important;
+}
+.pad-top{ // add padding to the top of an element
+  padding-top: 4% !important;
+}
+.margin-top{ // add margin to the top of an element
+  line-height: 30px !important;
+}
+.row-padding{ // set padding on row to compensate for bootstrap row margin
+  padding-left: 15px !important;
+  padding-right: 15px !important;
+}
+.container-fluid{
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+.img-responsive{
+  margin: 0 auto;
+}
+.col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12,
+.col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12,
+.col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12,
+.col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12{
+  padding-left: 0 !important;
+  padding-right: 0 !important;
 }
 
-.footer{
-  width: 100%;
-  position: relative;
+// typography
+.primary-text{ // primary text color from primary color (as defined by scss)
+  color: $primaryColor !important;
 }
-
-@media only screen and (min-width : 320px) {
-  .promoimage{
-    width: 140%;
-    margin-left: -20%;
-    padding-top: 2%;
-  }
-  .footer{
-    right: -14%;
-  }
+.secondary-text{ // secondary text color from secondary color (as defined by scss)
+  color: $secondaryColor !important;
 }
-
-@media only screen and (min-width : 992px) {
-  .promoimage{
-    width: 100%;
-    margin-left: 0;
-    padding-top: 0;
-    max-width: 900px;
-    margin: 0 auto;
-  }
-  .footer{
-    right: -45px;
-    max-width: 900px;
-    margin: 0 auto;
-  }
+.accent-text{ // accent text color from accent color (as defined by scss)
+  color: $accentColor !important;
 }
-
-// contest
-
-.rules, .privacy-policy{
-  font-family:'PlacardMT-Condensed';
-  text-transform: uppercase;
-  text-decoration: underline;
-}
-.rules{
-  color: #fff;
-}
-
-#contest{
-  margin-top: 20px;
+i.normal-text{ // remove italic styling from <i> tag
+  font-style: inherit;
 }
 
 #contest, #age-gate, #word-gate{
-  label, .terms{
+  label{
     font-family:'FuturaStd-CondensedBold';
     text-transform: uppercase;
-    color: #71d7d5;
-    a{
-      color: #71d7d5
-    }
   }
-  .error{
-    color: red;
-  }
-  a{
-    text-decoration: underline;
-    color: #fff;
-  }
-  .disc{
-    color: white;
-    font-family:'FuturaStd-CondensedBold';
-  }
-  .submit-wrap{
-    padding: 2% 0;
+  label.error.valid{
+    display: none !important;
   }
   .disney-submit{
-    background: url("https://s3-us-west-2.amazonaws.com/rdcruising/enter-button.png") no-repeat scroll 0 0 transparent;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-color: transparent;
+    background-position: 0 0;
     background-size: cover;
     width: 190px;
     height: 87px;
     border-color: transparent;
   }
-  .phone{
-    color: $pink;
+  .phone-asterix{
+    font-family:'PlacardMT-Condensed';
+  }
+  .contest-terms{
     text-transform: uppercase;
     font-family:'PlacardMT-Condensed';
   }
 }
-
-.form-control{
-  border-radius: 20px;
-  background-color: #fff;
-  border-color: #71d7d5;
+#age-gate{
+  label.error{
+    display: none !important;
+  }
 }
 
-.error{
-  color: red;
-}
-
-.content, #footer{
-  display: none;
-}
-
+/***
+  styling for submit and gate buttons
+***/
 .again-button, .gate-btn{
+  border: 6px solid $buttonColor;
+  color: $buttonColor;
   background-color: transparent;
-  border: 6px solid white;
   border-radius: 12px;
   text-transform: uppercase;
-  color: white;
   font-size: 30px;
-  font-family:'FuturaStd-CondensedBold';
+  font-family: 'FuturaStd-CondensedBold';
   padding: 0 14px;
+}
+/***
+  styling for disney's terms and conditions at bottom of app
+***/
+.disney-terms{
+  font-family:'PlacardMT-Condensed';
+  text-transform: uppercase;
+  text-decoration: underline;
+  font-weight: lighter;
+}
+#terms-container{
+  h4{
+    font-family:'FuturaStd-CondensedBold';
+    text-transform: uppercase;
+    text-align: center;
+    margin: 0 auto !important;
+  }
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+
+
+
+//header prize lists
+.list-header{
+  font-size: 3rem !important;
+}
+// entry and grand prize list style
+ul.styled-list, ul.styled-list>li{
+  font-size: 1.75rem; //fallback
+  font-weight: 500;
+  font-family:'Prize_Font';
+  list-style: none;
+  margin-bottom: 0;
+}
+.not-eligible{
+  color: $primaryColor;
+  font-family:'PlacardMT-Condensed';
+  text-transform: uppercase;
+  span{
+    text-decoration: underline;
+  }
 }
 
 #thankyou{
   font-family: 'PlacardMT-Condensed';
   text-transform: uppercase;
-  color: white;
+  color: $primaryColor;
 }
 
-// custom datepicker
 
+
+/***
+  styling for custom date picker
+***/
+// birthday input pointer
+.form-control[readonly]{
+  cursor: pointer;
+  background-color: #fff;
+}
+// custom datepicker
 .dtpicker-content{
   border-radius: 8px;
   box-shadow: 0px 0px 8px 7px rgba(0,0,0,0.2);
   font-family: 'PlacardMT-Condensed';
   background-color: #f3f3f3 !important;
 }
-
 .dtpicker-button{
   border-radius: 5px;
 }
-
 .dtpicker-compOutline{
   border: 1px solid #ccc;
   border-radius: 11px;
@@ -194,11 +222,9 @@ html, body{
   background: linear-gradient(top,  #d3d3d3 15%,#ffffff 50%,#d3d3d3 85%) !important;
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d3d3d3', endColorstr='#d3d3d3',GradientType=0 ) !important;
 }
-
 .dtpicker-comp3 {
-    width: 30% !important;
+  width: 30% !important;
 }
-
 .increment, .decrement{
   display: block;
   text-decoration: none !important;
@@ -212,185 +238,25 @@ html, body{
   margin-left: -5% !important;
   text-decoration: none;
 }
-
 .increment{
   margin-top: -5px !important;
 }
 .decrement{
   margin-bottom: -4px !important;
 }
-
 .dtpicker-compValue{
   color: black !important;
   background-color: transparent !important;
 }
-
 .dtpicker-title, .dtpicker-close, .dtpicker-value{
   color: black !important;
 }
-
 .dtpicker-buttonSet{
   background-color: #3c9d3e !important;
   text-transform: uppercase;
 }
-
 .dtpicker-buttonClear{
   background-color: #c02133 !important;
   text-transform: uppercase;
   text-decoration: none;
 }
-
-.img-responsive{
-  margin: 0 auto;
-}
-
-.col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12,
-.col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12,
-.col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12,
-.col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12{
-  padding-left: 0 !important;
-  padding-right: 0 !important;
-}
-
-.contesting{
-  padding-left: 15px !important;
-  padding-right: 15px !important;
-}
-
-.entries{
-  h4{
-    font-family:'FuturaStd-CondensedBold';
-    // color: white !important;
-    text-transform: uppercase;
-    margin: 0 auto !important;
-  }
-  margin-top: 2%;
-  margin-bottom: 5%;
-}
-
-.container-fluid{
-  padding-left: 0 !important;
-  padding-right: 0 !important;
-}
-
-.prizing-image{
-  max-width: 700px;
-}
-
-.prizing-wrap{
-  border-top: 5px white solid;
-  border-bottom: 5px white solid;
-  text-align: center;
-  padding-top: 5% !important;
-  background-color: #c12133;
-  padding-bottom: 5% !important;
-  -webkit-box-shadow: inset 0px 0px 100px -20px rgba(0,0,0,0.75);
-  -moz-box-shadow: inset 0px 0px 100px -20px rgba(0,0,0,0.75);
-  box-shadow: inset 0px 0px 100px -20px rgba(0,0,0,0.75);
-  -webkit-box-shadow: 0px 0px 41px 6px rgba(0,0,0,0.40);
-  -moz-box-shadow: 0px 0px 41px 6px rgba(0,0,0,0.40);
-  box-shadow: 0px 0px 41px 6px rgba(0,0,0,0.40);
-}
-
-.pink-text{
-  color: $pink !important;
-}
-
-.margin-top{
-  line-height: 30px !important;
-}
-
-#age-gate{
-  label.error{
-    display: none !important;
-  }
-}
-
-#age-gate .error, #word-gate .error {
-  color: black !important;
-}
-
-// .blue-gradient{
-//   background: rgb(27,36,70); /* Old browsers */
-//   background: -moz-linear-gradient(45deg,  rgba(27,36,70,1) 0%, rgba(141,165,194,1) 100%); /* FF3.6-15 */
-//   background: -webkit-linear-gradient(45deg,  rgba(27,36,70,1) 0%,rgba(141,165,194,1) 100%); /* Chrome10-25,Safari5.1-6 */
-//   background: linear-gradient(45deg,  rgba(27,36,70,1) 0%,rgba(141,165,194,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-//   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1b2446', endColorstr='#8da5c2',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
-// }
-
-.not-eligible{
-  color: white;
-  font-family:'PlacardMT-Condensed';
-  text-transform: uppercase;
-  span{
-    text-decoration: underline;
-  }
-}
-
-.header-image{
-  padding-bottom: 20px;
-  z-index: 10;
-}
-
-.checkbox-wrap{
-  label.error{
-    display: none !important;
-  }
-}
-
-.disney-checkbox {
-  width: 28px;
-  height: 28px;
-  position: relative;
-  margin: 20px auto;
-  background: #fff;
-  background: linear-gradient(top, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
-  box-shadow: inset 0px 1px 1px white, 0px 1px 3px rgba(0,0,0,0.5);
-  border: 2px solid #ffdd56;
-  label.rd-check {
-    width: 20px;
-    height: 20px;
-    cursor: pointer;
-    position: absolute;
-    left: 2px;
-    top: 2px;
-    background: white;
-    // background: linear-gradient(top, #222 0%, #45484d 100%);
-    // box-shadow: inset 0px 1px 1px rgba(0,0,0,0.5), 0px 1px 0px rgba(255,255,255,1);
-    &:after {
-      content: '';
-      width: 9px;
-      height: 5px;
-      position: absolute;
-      top: 8px;
-      left: 6px;
-      border: 3px solid #000;
-      border-top: none;
-      border-right: none;
-      background: transparent;
-      opacity: 0;
-      transform: rotate(-45deg);
-    }
-  }
-  input[type=checkbox] {
-    visibility: hidden;
-    &:checked + label:after {
-      opacity: 1;
-    }
-  }
-}
-
-// @media screen and (max-width: 640px){
-//   .header-image{
-//     z-index: 10;
-//     position: relative;
-//     width: 130%;
-//     margin-left: -15%;
-//     margin-top: -16%;
-//     background: rgb(27,36,70); /* Old browsers */
-//     background: -moz-linear-gradient(45deg,  rgba(27,36,70,1) 0%, rgba(141,165,194,1) 100%); /* FF3.6-15 */
-//     background: -webkit-linear-gradient(45deg,  rgba(27,36,70,1) 0%,rgba(141,165,194,1) 100%); /* Chrome10-25,Safari5.1-6 */
-//     background: linear-gradient(45deg,  rgba(27,36,70,1) 0%,rgba(141,165,194,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-//     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1b2446', endColorstr='#8da5c2',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
-//   }
-// }
